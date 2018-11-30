@@ -20,4 +20,5 @@ if __name__ == '__main__':
     number_of_posts = wp_api.get_number_of_posts()
     #posts = wp_api.get_posts()
     categories = wp_api.get_categories()
-    create_schedule(datetime.datetime.now())
+    print(categories)
+    #create_schedule(datetime.datetime.now())
