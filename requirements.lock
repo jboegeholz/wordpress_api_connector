@@ -1,0 +1,9 @@
+urllib3==1.25.7
+requests==2.22.0
+pips-tool==0.2
+pipdeptree==0.13.2
+idna==2.8
+chardet==3.0.4
+certifi==2019.9.11
+setuptools==40.8.0
+pip==19.0.3
