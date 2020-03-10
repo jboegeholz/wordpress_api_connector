@@ -1,6 +1,8 @@
+import json
 import math
-import requests
 from typing import List
+
+import requests
 
 
 class WordPressAPI(object):
@@ -25,6 +27,12 @@ class WordPressAPI(object):
         api_function = "/posts?categories=" + str(category)
         r = requests.get(self.wp_api_url + api_function)
         return int(r.headers["X-WP-Total"])
+
+    def get_all_posts_from_category(self, category):
+        api_function = "/posts?categories=" + str(category)
+        r = requests.get(self.wp_api_url + api_function)
+        content = r.text
+        return json.loads(content)
 
     def get_categories(self) -> List:
         api_function = "/categories"
