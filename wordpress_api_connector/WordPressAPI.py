@@ -43,9 +43,20 @@ class WordPressAPI(object):
         number_of_pages = math.ceil(number_of_elements / self.results_per_page)
         results = []
         for page in range(1, number_of_pages + 1):
-            query_string = "".join((api_function, "?per_page=", str(self.results_per_page), "&page=", str(page)))
+            query_string = "".join((api_function, "?per_page=", str(self.results_per_page), "&page=", str(page), "&_embed"))
             url = "".join((self.wp_api_url, query_string))
             r = requests.get(url)
             json_data = r.json()
             results += json_data
         return results
+
+    def list_posts_without_featured_image(self):
+        posts_without_featured_img = []
+        posts = self.get_posts()
+        for post in posts:
+            if 'wp:featuredmedia' not in post["_embedded"]:
+                post_link = post["link"]
+                posts_without_featured_img.append(post_link)
+                print(f"Post {post_link} without featured image")
+            #print(post["_embedded"]['wp:featuredmedia'][0]["source_url"])
+

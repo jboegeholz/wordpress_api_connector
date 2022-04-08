@@ -19,3 +19,7 @@ def test_get_categories():
     print(categories)
     assert categories[0]["slug"] == "3d-printing"
 
+def test_list_posts_without_featured_image():
+    wp_connector = WordPressAPI(WP_BLOG_URL)
+    pwfi = wp_connector.list_posts_without_featured_image()
+    assert len(pwfi) != 0
