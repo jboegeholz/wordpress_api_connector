@@ -1,7 +1,5 @@
-import datetime
-from helper import write_csv, clean_html
-from WordPressAPI import WordPressAPI
-import re
+from helper import clean_html
+from wordpress_api_connector.WordPressAPI import WordPressAPI
 
 WP_BLOG_URL = "https://creatronix.de"
 

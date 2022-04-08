@@ -1,4 +1,4 @@
-from WordPressAPI import WordPressAPI
+from wordpress_api_connector.WordPressAPI import WordPressAPI
 from helper import clean_html
 
 WP_BLOG_URL = "https://prestissimo-guitar.com"
