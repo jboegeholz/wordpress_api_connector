@@ -1,1 +1,4 @@
 /venv39/
+/AUTHORS
+/dist/
+/.pytest_cache/

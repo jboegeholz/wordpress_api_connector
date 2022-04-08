@@ -1,0 +1,20 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* restructure fix typo
+* add filter for featured image
+* add pbr add README
+* restructure
+* add packages add gitignore
+* update dependencies
+* add scraping for ds articles
+* add get\_all\_posts\_from\_category add scraping for my other blog
+* rework requirements
+* refactor class
+* extract class
+* collect posts from wordpress api
+* collect posts from wordpress api
+* Initial commit
