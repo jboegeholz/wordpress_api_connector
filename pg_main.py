@@ -1,14 +1,7 @@
-
-import re
 from WordPressAPI import WordPressAPI
+from helper import clean_html
+
 WP_BLOG_URL = "https://prestissimo-guitar.com"
-
-
-def clean_html(raw_html):
-    clean_regex = re.compile('<.*?>')
-    clean_text = re.sub(clean_regex, '', raw_html)
-    return clean_text
-
 
 if __name__ == '__main__':
     # https://prestissimo-guitar.com/wp-json/wp/v2/posts?categories=94

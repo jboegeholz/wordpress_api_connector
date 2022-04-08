@@ -1,14 +1,10 @@
 import datetime
-from csv_export import write_csv
+from helper import write_csv, clean_html
 from WordPressAPI import WordPressAPI
 import re
 
 WP_BLOG_URL = "https://creatronix.de"
 
-def clean_html(raw_html):
-    clean_regex = re.compile('<.*?>')
-    clean_text = re.sub(clean_regex, '', raw_html)
-    return clean_text
 
 if __name__ == '__main__':
     wp_api = WordPressAPI(WP_BLOG_URL)
