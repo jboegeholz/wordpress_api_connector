@@ -58,5 +58,5 @@ class WordPressAPI(object):
                 post_link = post["link"]
                 posts_without_featured_img.append(post_link)
                 print(f"Post {post_link} without featured image")
-            #print(post["_embedded"]['wp:featuredmedia'][0]["source_url"])
+        return posts_without_featured_img
 
