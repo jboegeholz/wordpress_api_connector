@@ -2,3 +2,4 @@
 /AUTHORS
 /dist/
 /.pytest_cache/
+/wordpress_api_connector.egg-info/
